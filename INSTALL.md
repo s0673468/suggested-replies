@@ -35,7 +35,8 @@ with two or three numbered next steps, and the user can answer with just a numbe
      through it.
 
    Shortcut: if you can run shell commands, `git clone` this repository and run
-   `./install.sh`. It does exactly this for Claude Code and Codex.
+   `./install.sh`. It adds or replaces the block for Claude Code and Codex. It
+   does not look for similar rules or generated files, so do those two checks first.
 
 4. **Check.** Read each file back and confirm the block appears exactly once.
 
@@ -45,4 +46,5 @@ with two or three numbered next steps, and the user can answer with just a numbe
 ## Uninstall
 
 Delete the lines from `<!-- suggested-replies:start` through
-`<!-- suggested-replies:end -->`, or run `./install.sh --uninstall`.
+`<!-- suggested-replies:end -->`, or run `./install.sh --uninstall` from the
+cloned folder. The script deletes a file only if the block was all it held.
